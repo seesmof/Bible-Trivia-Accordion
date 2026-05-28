@@ -22,7 +22,7 @@ const AccordionItem = ({ title, description }: ItemProps) => {
         <span>{isOpen ? "/\\" : "\\/"}</span>
       </div>
       {isOpen && (
-        <div className="rounded-md p-3 outline-2 outline-slate-200">
+        <div className="rounded-md p-3 outline-2 ml-5 outline-slate-200">
           {description}
         </div>
       )}
