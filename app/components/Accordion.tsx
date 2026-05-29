@@ -13,19 +13,17 @@ const AccordionItem = ({ title, description }: ItemProps) => {
   return (
     <>
       <div
-        className="justify-between flex flex-row p-3 bg-slate-200 rounded-md cursor-pointer"
+        className="p-3 outline outline-stone-300 rounded-md cursor-pointer flex flex-col gap-3"
         onClick={() => {
           setIsOpen((isOpen) => !isOpen);
         }}
       >
-        <p>{title}</p>
-        <span>{isOpen ? "/\\" : "\\/"}</span>
-      </div>
-      {isOpen && (
-        <div className="rounded-md p-3 outline-2 ml-5 outline-slate-200">
-          {description}
+        <div className="flex flex-row justify-between w-full">
+          <p>{title}</p>
+          <span>{isOpen ? "/\\" : "\\/"}</span>
         </div>
-      )}
+        {isOpen && <div className="ml-5">{description}</div>}
+      </div>
     </>
   );
 };
