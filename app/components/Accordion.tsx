@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-interface ItemProps {
+type ItemProps = {
   title: string;
   description: string;
-}
+};
 
 const AccordionItem = ({ title, description }: ItemProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -1,6 +1,6 @@
 import Accordion from "@/components/Accordion";
 
-const Page = () => {
+export default function IndexPage() {
   return (
     <div className="min-h-screen">
       <div className="max-w-xl mx-auto w-full p-3 md:mt-5">
@@ -14,6 +14,4 @@ const Page = () => {
       </div>
     </div>
   );
-};
-
-export default Page;
+}
